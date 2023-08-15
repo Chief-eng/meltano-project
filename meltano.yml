@@ -14,7 +14,7 @@ jobs:
   tasks:
   # Update this section to include any EL jobs or other
   # commands that you'd like to run:
-  - tap-smoke-test target-json1
+  - tap-sevenrooms target-redshift
 plugins:
   extractors:
   - name: tap-sevenrooms
