@@ -1,0 +1,16 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-sevenrooms",
+  "namespace": "tap_sevenrooms",
+  "variant": "uptilab2",
+  "label": "SevenRooms",
+  "docs": "https://hub.meltano.com/extractors/tap-sevenrooms--uptilab2",
+  "repo": "https://github.com/uptilab2/tap-sevenrooms",
+  "pip_url": "git+https://github.com/uptilab2/tap-sevenrooms.git",
+  "description": "Reservation and Guest Experience Platform",
+  "logo_url": "https://hub.meltano.com/assets/logos/extractors/sevenrooms.png",
+  "capabilities": [
+    "catalog",
+    "discover"
+  ]
+}

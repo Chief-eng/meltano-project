@@ -7,13 +7,20 @@ environments:
 - name: prod
 schedules:
 - name: daily-refresh
-  job: daily-refresh-job
   interval: '@daily'  # Can be @daily, @hourly, etc., or a cron-based interval
+  job: daily-refresh-jobch
 jobs:
 - name: daily-refresh-job
   tasks:
   # Update this section to include any EL jobs or other
   # commands that you'd like to run:
-  - tap-gitlab target-snowflake
-  - dbt-snowflake:run
-  - dbt-snowflake:test
+  - tap-sevenrooms target-redshift
+plugins:
+  extractors:
+  - name: tap-sevenrooms
+    variant: uptilab2
+    pip_url: git+https://github.com/uptilab2/tap-sevenrooms.git
+  loaders:
+  - name: target-redshift
+    variant: transferwise
+    pip_url: git+https://github.com/menzenski/pipelinewise-target-redshift.git@856f6390805e4d64e743901b5f585f01a93df6a1
